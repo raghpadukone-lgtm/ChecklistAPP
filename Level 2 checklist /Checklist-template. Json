@@ -1,0 +1,217 @@
+{
+    "CK/Pacman Arena": [
+        {
+            "id": "ck-open",
+            "title": "CK/Pacman Opening",
+            "tasks": [
+                "Ensure all the lights are turning on including emergency lights. Ensure no flickering or outages",
+                "All the doors are working properly. Siiting areas are clean and orgnaized",
+                "Operator room is clean and well organized",
+                "Ensure the Fire exit door access is not obstructed, fully functional and the signage is visible clearly",
+                "Verify that the first aid kit is available, fully replenished, and all items are within their expiry date",
+                "Conduct a full round arena inspection for hazards. Report any damages, sharp objects, or potential threats to the Tech Team and Duty Manager immediately",
+                "Barriers are arranged neatly. Pacman stage and Karts are kept in their designated area",
+                "Karts are cleaned, disinfected and having no damages",
+                "Fire buttons, Seatbelt, LED Stingers, Pedals, Canbus, Speakers are functioning properly. Ensure Batteries are sufficiently charged to start the sessions",
+                "All the pacman jackets are cleaned and disinfected. Ensured they are all turning on and functioning well",
+                "Pacman jacket charging stations in both briefing room and Arena are clean, wiped and working well",
+                "Briefing room is well organized, all the floor mats are intact, doors are functioning well, vidoes are playing and the room is litter free",
+                "Operating tablets are turning on, fully charged and are in good working condition",
+                "Mic is functioning and Activity log sheets are availale",
+                "Report to Duty Manager that the attraction is ready for operation 15 minutes beofre the schedueled opening time"
+            ]
+        },
+        {
+            "id": "ck-close",
+            "title": "CK/Pacman Closing",
+            "tasks": [
+                "Ensure all the Karts are parked in their designated areas. Batteries are removed and kept in charging.",
+                "All the barriers are arranged properly, clean and are out of any debris.",
+                "Arena is inspected for any damages, sharp edges or debris and ensured it is clean. Any lost and found items are handed over to reception.",
+                "Damages, sharp edges or any other hazards identified are informed to technical team and DM.",
+                "Ensured all operating tablets are kept under charging in their designated areas.",
+                "Charging station for pacman jackets are functioning well both in briefing room and arena.",
+                "Briefing rooms projector is turned off, room is clean, organized and floor matts are intact, lights are turned off.",
+                "Activity log sheets are signed, and logs are updated to system.",
+                "Operator counter is clean, organized and litter free.",
+                "Lights in the arena are turned off and door is closed."
+            ]
+        }
+    ],
+    "Titanic/HT Arena": [
+        {
+            "id": "th-open",
+            "title": "Titanic/HT Opening",
+            "tasks": [
+                "Ensure All the lights are on, AC is working, the area is clean,mopped and litter free.",
+                "Area is inspected for any safety hazard such as Sharp edges, trip/slip hazards, protruding objects, or damages and informed to DM immediately if identified.",
+                "Check all electric equipment, plugs and wires to ensure they are all in good condition, no wires or plugs are damaged or torn. Ensure dustbin is emptied and new liner is placed.",
+                "Ensure the Fire exit door access is not obstructed, fully functional and the signage is visible clearly.",
+                "Verify that the first aid kit is available, fully replenished, and all items are within their expiry date.",
+                "Ensure All the headset are fully charged and charging is turned on. External Batteries are in place and fully charged.",
+                "[number] No of Headsets available.",
+                "[number] No of spare batteries Available.",
+                "[number] No of Rechargable batteries available.",
+                "Wet wipes are available and in adequate quantity.",
+                "Turn on all PCs and Tablets required to operate Ttianic. Ensure they are fully functioning and no technical errors identified. Turn on the TV screen outside.",
+                "Minimum 20 headsets are configured for Titanic and ensured they are ready to operate without any tech issues.",
+                "Prepare all headsets ready for Hyper Tag. Ensure they are not having any technical issues (e.g. height disalignment, spatial anchor error or map dislocations etc).",
+                "Test run the applications and ensure they are operating well.",
+                "Ensure joysticks in 'Hyper Tag' are functioning properly, and weapons are picked up and usable without issues.",
+                "Any issues found in the application or in headset are immediately reported to DM and logged in activity log sheet.",
+                "Report to Duty Manager that the attraction is ready for operation 15 minutes beofre the schedueled opening time."
+            ]
+        },
+        {
+            "id": "th-close",
+            "title": "Titanic/HT Closing",
+            "tasks": [
+                "Ensure all VR headsets are turned off and kept in charging. External batteris are placed in their charging stations and charging turned on.",
+                "Close the applications , turn off the PCs and ensure the operating desk is clean and organized.",
+                "[number] No of Headsets available.",
+                "[number] No of spare batteries Available.",
+                "[number] No of Rechargable batteries available.",
+                "Keep all the tablets for charging in their stations.",
+                "Inspect the area for safety hazards, damages, sharp objects, or trip/slip risks. Report any issues to the Duty Manager immediately.",
+                "Any 'Lost and Found' items are handed over to DM/Reception.",
+                "Make sure the area is clean, litter free and well organized.",
+                "Turn of the AC, liights and close the door firmly."
+            ]
+        }
+    ],
+    "HT Arena Upstairs": [
+        {
+            "id": "hta-open",
+            "title": "HT Arena Upstairs Opening",
+            "tasks": [
+                "Ensure All the lights are on, AC is working, the area is clean,mopped and litter free.",
+                "Area is inspected for any safety hazard such as Sharp edges, trip/slip hazards, protruding objects, or damages and informed to DM immediately if identified.",
+                "Check all electric equipment, plugs and wires to ensure they are all in good condition, no wires or plugs are damaged or torn. Ensure dustbin is emptied and new liner is placed.",
+                "Ensure the Fire exit door access is not obstructed, fully functional and the signage is visible clearly.",
+                "Verify that the first aid kit is available, fully replenished, and all items are within their expiry date.",
+                "Ensure All the headset are fully charged and charging is turned on.",
+                "Ensure all the external betteries/powerbanks are in place and fully charged.",
+                "Wet wipes are available and in adequate quantity.",
+                "[number] No of Headsets available.",
+                "[number] No of spare batteries Available.",
+                "[number] No of Rechargable batteries available.",
+                "Operating tablet is turned on and fully charged.",
+                "Configure all headsets ready to operate the Hyper Tag, calibrate them, ensure they are not having any technical issues (e.g. height disalignment, spatial anchor error or map dislocation etc).",
+                "Test run the 'Battle Start' applications and ensure it is functioning well.",
+                "Ensure joysticks for 'Hyper Tag' are functioning properly. Weapons are picked up and usable without issues. Ensure joysticks batteries are efficient and spare batteries are available in stock.",
+                "Any issues found in the application or in headset are immediately reported to DM and logged in activity log sheet.",
+                "Fill the DRS and get it signed by DM, fill the Arena Inventory Sheet, check for consumables that need to be replenished and informt to DM.",
+                "Report to Duty Manager that the attraction is ready for operation 15 minutes beofre the schedueled opening time."
+            ]
+        },
+        {
+            "id": "hta-close",
+            "title": "HT Arena Upstairs Closing",
+            "tasks": [
+                "Ensure all VR headsets are turned off and kept in charging. External batteris are placed in their charging stations and charging turned on.",
+                "Close the applications , turn off the tablet and keep it for charging.",
+                "[number] No of Headsets available.",
+                "[number] No of spare batteries Available.",
+                "[number] No of Rechargable batteries available.",
+                "Keep all the tablets for charging in their stations.",
+                "Inspect the area for safety hazards, damages, sharp objects, or trip/slip risks. Report any issues to the Duty Manager immediately.",
+                "Check for lost and found items and handover to receptions if found any.",
+                "Make sure the area is clean, litter free and well organized.",
+                "Complete the arena closing inventory sheet, check for the consumables required and inform the DM.",
+                "Turn of the AC, liights and close the door firmly."
+            ]
+        }
+    ],
+    "Reception/Ticketing": [
+        {
+            "id": "rec-open",
+            "title": "Reception Opening",
+            "tasks": [
+                "Log into system",
+                "Count cash float",
+                "Prepare wristbands"
+            ]
+        }
+    ],
+    "Housekeeping": [
+        {
+            "id": "hk-daily",
+            "title": "Daily Cleaning",
+            "tasks": [
+                "Empty trash",
+                "Clean restrooms",
+                "Vacuum carpets",
+                "Wipe glass surfaces"
+            ]
+        }
+    ],
+    "Kitchen": [
+        {
+            "id": "kit-open",
+            "title": "Kitchen Opening",
+            "tasks": [
+                "Turn on equipment",
+                "Check fridge temps",
+                "Prep ingredients"
+            ]
+        }
+    ],
+    "Cafe Bar": [
+        {
+            "id": "cafe-open",
+            "title": "Cafe Bar Opening",
+            "tasks": [
+                "Start coffee machine",
+                "Stock pastry display",
+                "Wipe counters"
+            ]
+        }
+    ],
+    "Duty Manager": [
+        {
+            "id": "dm-morning",
+            "title": "Duty Manager Morning",
+            "tasks": [
+                "Entrance sliding door is working properly, tunnel is clean and presentable.",
+                "All lights are on in the facility, music is on and TV screens are turned on.",
+                "Reception opening checklist signed, all the POS and all tablets are turned on and reception is ready to accept guests.",
+                "Vouchers, brochures, wrist bands, recepit rolls are sufficiently available for the operation. All QR codes are working and promotonal displays are working.",
+                "Floats are assigned to cashiers.",
+                "Café sitting area is neatly arranged, tables & chairs are clean and floor is mopped.",
+                "F&B checklists are signed, area is inspected and is ready to open",
+                "Café opening checklist is signed and ready for operation.",
+                "Washroom checklists are signed and ready for operation.",
+                "Housekeeping opening checklist is signed and ready for operation.",
+                "Arena opening checklists are signed and ready for operation.",
+                "Titanic and Hyper Tag opening checklists are signed and ready for operation.",
+                "Test run for all attractions are done, approval from maintenance is received to run all the attractions for guests.",
+                "All emergency exits are checked and ensured they are accessible and functioning properly.",
+                "Ensured all the first aid boxes in designated areas are present and replenished. (Reception, Arena, Titanic, Events room, Tech room)",
+                "Staff briefing is done, daily targets are given and ensured all allocations are covered.",
+                "Merchandise shelves are replenished and well presented.",
+                "All the stocks for consumables are checked and low stock items are listed to request for order.",
+                "Houskeeping Pantry, Events room pantries are inspected and ensured they are clean and organized",
+                "Events are updated to teams, event rooms checked & invitations for the welcome board are printed.",
+                "Ensured all the staff are present in their allocation 10 mins beofre opening the venue for Guests and got confirmation (good to go) from all operators to start the operations."
+            ]
+        },
+        {
+            "id": "dm-close",
+            "title": "Duty Manager Closing",
+            "tasks": [
+                "All zones/areas closing walkthrough is done to check cleanliness, damages and hazards.",
+                "Closing cashout is done, Sales and float bag is securely stored in safe.",
+                "Café sale and float is received, tallied and stored in safe.",
+                "All other equipment are turned off, area is clean and organized.",
+                "Café closing checklist is singed and ensure all the equpment and items/consumable are kept int their places, clean and organized.",
+                "Café sitting area is clean and well organized",
+                "Titanic and Hyper Tag closing checklist is signed, area is clean and well organized.",
+                "Arena closing checklist is signed, area is clean and well organized.",
+                "Events rooms are clean, neat and well organized.",
+                "Briefing room is clean, well organized and projectors are truned off.",
+                "TV screens are turned off, music is swithced off, remotes are kept in their places.",
+                "Ensured that next day duty allocations are shared and DM closing report is updated."
+            ]
+        }
+    ]
+}
