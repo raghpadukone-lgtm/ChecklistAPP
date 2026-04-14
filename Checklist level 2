@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Games | Corporate Checklist App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=closing_update">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({ publicKey: "7mLQdoFD1B91UJmyx" }); 
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="neon-bg">
+        <div class="grid-layer"></div>
+        <div class="ambient-glow glow-cyan"></div>
+        <div class="ambient-glow glow-pink"></div>
+        <!-- Neon lines restored! -->
+        <div class="neon-line horizontal line-1"></div>
+        <div class="neon-line horizontal line-2"></div>
+        <div class="neon-line vertical line-3"></div>
+        <div class="neon-line vertical line-4"></div>
+    </div>
+
+    <main class="app-container">
+        <!-- Login / Setup Section -->
+        <section id="login-section" class="glass-panel active">
+            <div class="header" style="position: relative; text-align: center;">
+                <button id="admin-tools-btn" class="icon-btn" title="Settings"
+                    style="position: absolute; top: -10px; right: -10px; border: none; background: transparent;">
+                    <span class="material-icons-round">settings</span>
+                </button>
+                <img src="logo.png" class="app-logo login-logo" alt="Active Games Logo"
+                    onerror="this.style.display='none'; document.getElementById('fb-logo').style.display='inline-block'">
+                <span id="fb-logo" class="material-icons-round hero-icon" style="display:none;">verified_user</span>
+                <h1>Welcome to Active Games</h1>
+                <p>Digital Checklist Management</p>
+            </div>
+
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="staff-name">Staff Name</label>
+                    <input type="text" id="staff-name" placeholder="Enter your full name" required autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="role-select">Primary Role</label>
+                    <select id="role-select" required>
+                        <option value="" disabled selected>Select your area / department</option>
+                        <!-- Options injected by JS based on JSON keys -->
+                    </select>
+                </div>
+                <button type="submit" class="btn primary-btn">
+                    Access Checklists
+                    <span class="material-icons-round">arrow_forward</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard-section" class="glass-panel hidden">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="logo.png" class="app-logo dashboard-logo" alt="Active Games Logo"
+                    onerror="this.style.display='none'">
+            </div>
+            <header class="dash-top">
+                <div class="user-info">
+                    <div class="avatar"><span id="user-initial">A</span></div>
+                    <div>
+                        <h2>Hello, <span id="display-name">Alex</span></h2>
+                        <p class="role-text" id="display-role">Operations</p>
+                    </div>
+                </div>
+                <button id="logout-btn" class="btn"
+                    style="width: auto; padding: 8px 16px; font-size: 14px; background: rgba(255,255,255,0.1); color: #fff; margin-left: auto;">
+                    <span class="material-icons-round" style="font-size: 16px;">logout</span>
+                    Sign Out
+                </button>
+            </header>
+
+            <div class="task-summary">
+                <div class="summary-card">
+                    <h3>0</h3>
+                    <p>Submitted Today</p>
+                </div>
+                <div class="summary-card highlight">
+                    <h3 id="current-date">--/--/----</h3>
+                    <p>Current Date</p>
+                </div>
+            </div>
+
+            <h3 class="section-title">Available Checklists</h3>
+            <div class="checklist-grid" id="checklist-grid">
+                <!-- Dynamically populated based on role -->
+            </div>
+        </section>
+
+        <!-- Active Checklist Section -->
+        <section id="checklist-section" class="glass-panel hidden">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="logo.png" class="app-logo dashboard-logo" alt="Active Games Logo"
+                    onerror="this.style.display='none'">
+            </div>
+            <header class="dash-top">
+                <button id="back-btn" class="icon-btn">
+                    <span class="material-icons-round">arrow_back</span>
+                </button>
+                <div class="title-center">
+                    <h2 id="checklist-title">Arena 1 Opening</h2>
+                </div>
+                <div class="spacer"></div>
+            </header>
+
+            <div class="progress-container">
+                <div class="progress-text">
+                    <span>Progress</span>
+                    <span id="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+
+            <form id="checklist-form">
+                <div class="tasks-list" id="tasks-list">
+                    <!-- Tasks injected here -->
+                </div>
+
+                <div class="notes-group">
+                    <label for="checklist-notes">Additional Remarks</label>
+                    <textarea id="checklist-notes" placeholder="Any issues or observations..." rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn success-btn" id="submit-checklist-btn" disabled>
+                    Submit Checklist
+                    <span class="material-icons-round">check_circle</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Success overlay -->
+        <div id="success-overlay" class="overlay hidden">
+            <div class="success-card glass-panel">
+                <span class="material-icons-round success-icon">task_alt</span>
+                <h2>Checklist Submitted!</h2>
+                <p>Your record has been securely saved.</p>
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+                    <button id="close-success-btn" class="btn primary-btn">Back to Dashboard</button>
+                    <button id="success-logout-btn" class="btn" style="background: rgba(255,255,255,0.05);">Switch
+                        User</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Modal -->
+        <div id="admin-modal" class="overlay hidden">
+            <div class="success-card glass-panel" style="text-align: left;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px;">
+                    <span class="material-icons-round" style="color: var(--accent);">admin_panel_settings</span>
+                    <h2 style="margin: 0;">Admin Settings</h2>
+                </div>
+
+                <div class="input-group" style="margin-bottom: 24px;">
+                    <label for="upload-json">Upload Custom Checklists (JSON)</label>
+                    <input type="file" id="upload-json" accept=".json" style="padding: 10px;">
+                    <p style="font-size: 13px; margin-top: 12px; line-height: 1.4;">
+                        Upload a modified <code>checklist-template.json</code> to overwrite standard checklists.
+                    </p>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 24px 0;">
+                
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                    <h3 style="margin: 0; font-size: 16px; color: white;">Submission Log</h3>
+                    <div style="display: flex; gap: 8px;">
+                        <button type="button" id="export-history-btn" class="btn" style="padding: 6px 12px; font-size: 12px; background: rgba(0, 229, 255, 0.2); color: var(--accent); border: 1px solid rgba(0, 229, 255, 0.4);">Export CSV</button>
+                        <button type="button" id="clear-history-btn" class="btn" style="padding: 6px 12px; font-size: 12px; background: rgba(239, 68, 68, 0.2); color: #ffcccc; border: 1px solid rgba(239, 68, 68, 0.4);">Clear All</button>
+                    </div>
+                </div>
+                <div id="admin-history-list" style="max-height: 200px; overflow-y: auto; background: rgba(0,0,0,0.4); border-radius: 8px; padding: 10px; font-size: 13px; color: #ccc; border: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; gap: 8px;">
+                    <p style="text-align: center; color: #888; font-style: italic;">No history records found.</p>
+                </div>
+                <div style="margin-top: 24px;">
+                    <button type="button" id="change-pin-btn" class="btn" style="width: 100%; background: rgba(0, 229, 255, 0.1); border: 1px solid var(--accent); color: var(--accent);">Change Master PIN</button>
+                </div>
+                <div style="display: flex; gap: 12px; margin-top: 12px;">
+                    <button id="close-admin-btn" class="btn"
+                        style="background: rgba(255,255,255,0.1); color: white;">Cancel</button>
+                    <button id="reset-admin-btn" class="btn"
+                        style="background: rgba(239, 68, 68, 0.4); color: white;">Restore Defaults</button>
+                    <button id="save-admin-btn" class="btn primary-btn">Save Content</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deep Viewer Modal -->
+        <div id="deep-viewer-modal" class="overlay hidden" style="z-index: 2000;">
+            <div class="success-card glass-panel" style="max-height: 80vh; width: 90%; max-width: 800px; display: flex; flex-direction: column; text-align: left;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
+                    <h2 style="margin: 0; font-size: 18px;" id="dv-title">Submission Details</h2>
+                    <div style="display: flex; gap: 12px; align-items: center;">
+                        <button type="button" id="export-single-dv-btn" class="btn" style="padding: 4px 10px; font-size: 11px; background: rgba(0, 229, 255, 0.2); color: var(--accent); border: 1px solid rgba(0, 229, 255, 0.4); width: auto;">Download CSV</button>
+                        <span class="material-icons-round" id="close-dv-btn" style="cursor: pointer; color: #ffcccc;">close</span>
+                    </div>
+                </div>
+                <div id="dv-meta" style="font-size: 13px; color: #ccc; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;"></div>
+                <div id="dv-answers" style="overflow-y: auto; flex: 1; padding-right: 5px; display: flex; flex-direction: column; gap: 8px;"></div>
+                <div id="dv-notes-container" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <h4 style="margin: 0 0 5px 0; color: var(--accent);">Notes / Comments</h4>
+                    <p id="dv-notes" style="font-size: 13px; color: #fff; margin: 0; font-style: italic; background: rgba(0,0,0,0.3); padding: 8px; border-radius: 4px;"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js?v=closing_update"></script>
+</body>
+
+</html>
